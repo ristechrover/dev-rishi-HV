@@ -1,0 +1,171 @@
+<section class="ambassador_brand">
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-2-3">
+        <div class="brand_header">
+          {% comment %}
+          {% if section.settings.header_title %}
+          <h2>{{section.settings.header_title}}</h2>
+          {% endif %}
+          {% endcomment %}
+          <div class="title"><img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/Benefits_Rewards.png?v=1630995650"></div>
+          <p>{{section.settings.sub_title}}</p>
+          <img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/arrow-left.png?v=1630586665" class="arrow right">
+        </div>
+      </div>
+    </div>
+    <div class="brand">
+      <img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/Stamp.png?v=1630588531" class="stamp" alt="stamp">
+      <h3 class="text-center entitle">
+        {{section.settings.paragraph}}
+        <img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/wave.png?v=1630591525">
+      </h3>
+      <div class="brand_content">
+        <div class="content">
+          <img src="{{ section.settings.brand_img_1 | img_url: 'master' }}" />
+          {% if section.settings.brand_title_1 %}
+          	<h3>{{section.settings.brand_title_1}}</h3>
+          {% endif %}
+        </div>
+        <div class="content">
+          <img src="{{ section.settings.brand_img_2 | img_url: 'master' }}" />
+          {% if section.settings.brand_title_2 %}
+          <h3>{{section.settings.brand_title_2}}</h3>
+          {% endif %}
+        </div>
+        <div class="content">
+          <img src="{{ section.settings.brand_img_3 | img_url: 'master' }}" />
+          {% if section.settings.brand_title_3 %}
+          <h3>{{section.settings.brand_title_3}}</h3>
+         {% endif %}
+        </div>
+        <div class="content">
+          <img src="{{ section.settings.brand_img_4 | img_url: 'master' }}" />
+          {% if section.settings.brand_title_4 %}
+          	<h3>{{section.settings.brand_title_4}}</h3>
+          {% endif %}
+        </div>
+        <div class="content">
+          <img src="{{ section.settings.brand_img_5 | img_url: 'master' }}" />
+          {% if section.settings.brand_title_5 %}
+          	<h3>{{section.settings.brand_title_5}}</h3>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="row justify-content-center">
+      <div class="col-1-2 text-center">
+        {% if section.settings.button_text %}
+        	<div class="btn-div"><a href="{{section.settings.button_link}}" class="hup-btn">{{section.settings.button_text}}</a></div>
+       {% endif %}
+        {% if section.settings.Description %}
+        <p class="style-italic">{{section.settings.Description}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div> 
+</section>
+
+{% schema %}
+  {
+    "name": "Brand Icon",
+    "settings": [
+		{
+          "type": "text",
+          "id": "header_title",
+          "label": "Header Title",
+          "default": "Benefits & rewards "
+        },
+		{
+          "type": "text",
+          "id": "sub_title",
+          "label": "Sub Title",
+          "default": "lorem ............ "
+        },
+		{
+          "type": "text",
+          "id": "paragraph",
+          "label": "Paragraph",
+          "default": "Everytime you  send  anyone to the site Earn up to 10% off all sales from their purches"
+        },
+		{
+              "type": "image_picker",
+              "id": "brand_img_1",
+              "label": "Brand Imag 1"
+            },
+            {
+              "type": "text",
+              "id": "brand_title_1",
+              "label": "Brand Title 1"
+            },
+			{
+              "type": "image_picker",
+              "id": "brand_img_2",
+              "label": "Brand Imag 2"
+            },
+            {
+              "type": "text",
+              "id": "brand_title_2",
+              "label": "Brand Title 2"
+            },
+			{
+              "type": "image_picker",
+              "id": "brand_img_3",
+              "label": "Brand Title 3"
+            },
+            {
+              "type": "text",
+              "id": "brand_title_3",
+              "label": "Brand Title 3"
+            },
+			{
+              "type": "image_picker",
+              "id": "brand_img_4",
+              "label": "Brand Imag 4"
+            },
+            {
+              "type": "text",
+              "id": "brand_title_4",
+              "label": "Brand Title 4"
+            },
+			{
+              "type": "image_picker",
+              "id": "brand_img_5",
+              "label": "Brand Imag 5"
+            },
+            {
+              "type": "text",
+              "id": "brand_title_5",
+              "label": "Brand Title 5"
+            },
+			{
+              "type": "text",
+              "id": "button_text",
+              "label": "button",
+              "default": "Join Today"
+            },
+            {
+              "type": "url",
+              "id": "button_link",
+              "label": "Button link"
+            },
+			{
+              "type": "text",
+              "id": "Description",
+              "label": "Description",
+              "default": "Applying doesn’t guarantee acceptance into the program.If accepted we will contact you directly."
+            }
+		
+	]
+
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

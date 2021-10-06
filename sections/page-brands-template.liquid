@@ -1,0 +1,157 @@
+<div class="brand-top-section">
+  <div class="row">
+    <div class="col-1-4">
+      <img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/Tie-Fighters-img.png?v=1630582594">
+    </div>
+    <div class="col-2-4 padding-lr-30 text-center">
+      <div class="logo">
+        <a href="/">
+          {% if section.settings.logo != blank %}
+          <img src="{{ section.settings.logo | img_url: 'master' }}" alt="Heroes & Villains">
+          {% endif %}
+          
+        </a>
+      </div>
+      {% if section.settings.button_text != blank %}
+      <div class="btn-div"><a href="{{section.settings.button_link}}" class="hup-btn">{{section.settings.button_text}}</a></div>
+      {% endif %}
+      {% if section.settings.description != blank %}
+      <p>{{section.settings.description}}</p>
+      {% endif %}
+      <a  href="{{section.settings.social_link}}" class="social_link">
+        <div>[<strong>{{section.settings.social_text}}</strong>]</div>
+        <img src="{{ section.settings.social_icon | img_url: 'master' }}" alt="Instagram">
+      </a>
+    </div>
+    <div class="col-1-4 text-right image-right-bottom">
+      <img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/Dragon-img.png?v=1630580233">
+    </div>
+  </div>
+</div>
+<div class="brand-middle-section padding-top-145">
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-1-3">
+        <div class="desktop-img">
+        <img src="{{ section.settings.Character1 | img_url: 'master' }}" alt="Fall cosplay - deer stalker">
+        </div>
+        <div class="mobile-img">
+        <img src="{{ section.settings.Character_mobile_1 | img_url: 'master' }}" alt="Fall cosplay - deer stalker">
+        </div>
+      </div>
+      <div class="col-2-3 text-right">
+        <img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/arrow-right.png?v=1630586665" class="arrow left">
+        {% comment %}
+        {% if section.settings.title != blank %}
+        	<h2>{{section.settings.title}}</h2>
+        {% endif %}
+        {% endcomment %}
+        <div class="title"><img src="https://cdn.shopify.com/s/files/1/0017/3113/3555/files/In_good_company.png?v=1630995568"></div>
+        <div class="brand-middle-text">
+        {% if section.settings.para1 != blank %}
+        	<p>{{section.settings.para1}}</p>
+        {% endif %}
+        {% if section.settings.para2 != blank %}
+        	<p>{{section.settings.para2}}</p>
+         {% endif %}
+        {% if section.settings.para3 != blank %}
+        	<p>{{section.settings.para3}}</p>
+        {% endif %}
+        </div>
+        <img src="{{ section.settings.Character2 | img_url: 'master' }}" alt="@Bekahsoka" class="character2">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Brands template",
+"settings": [
+	{
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+	{
+      "type": "text",
+      "id": "button_text",
+      "label": "button",
+      "default": "Button Text"
+    },
+	{
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+	{
+      "type": "text",
+      "id": "description",
+      "label": "description",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis."
+    },
+	{
+      "type": "text",
+      "id": "social_text",
+      "label": "Social Text",
+      "default": "[ #heroesANDvillains ]"
+    },
+	{
+      "type": "image_picker",
+      "id": "social_icon",
+      "label": "Social Icon"
+    },
+	{
+      "type": "url",
+      "id": "social_link",
+      "label": "social link"
+    },
+	{
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "IN GOOD COMPANY."
+    },
+	{
+      "type": "text",
+      "id": "para1",
+      "label": "Description 1",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices."
+    },
+	{
+      "type": "text",
+      "id": "para2",
+      "label": "Description 2",
+      "default": "“Etiam imperdiet tempor orci, nec vestibulum nisl urna a metus.”"
+    },
+	{
+      "type": "text",
+      "id": "para3",
+      "label": "Description 3",
+      "default": "— Lorem Ipsum"
+    },
+	{
+      "type": "image_picker",
+      "id": "Character1",
+      "label": "Character 1"
+    },
+	{
+      "type": "image_picker",
+      "id": "Character_mobile_1",
+      "label": "Character mobile 1 "
+    },
+	{
+      "type": "image_picker",
+      "id": "Character2",
+      "label": "Character 2"
+    }
+	
+ ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
